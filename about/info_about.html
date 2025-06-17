@@ -3,13 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyle Wybo | Portfolio</title>
+  <title>About Me | Kyle Wybo</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .about-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      align-items: flex-start;
+    }
+    .about-text {
+      flex: 2;
+    }
+    .about-photo {
+      flex: 1;
+    }
+    .about-photo img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .resume-button {
+      display: inline-block;
+      margin-top: 0.5em;
+      padding: 0.5em 1em;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .resume-button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Kyle Wybo</h1>
-    <p>Web Developer | Designer | Your Role</p>
+    <h1>About Me</h1>
   </header>
 
 <nav>
@@ -19,20 +50,29 @@
   <a href="/contact/contact.html">Contact</a>
 </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>This is where your personal story goes.</p>
-  </section>
+  <main>
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Hello, I'm Kyle Wybo</h2>
+        <p>I'm a recent graduate of Michigan Technological University, with a Bacholers of Science in Computer Science. I have a background mainly in C and Python, I specialize in Linux OS.</p>
+        <p>Currently, I'm working on getting my skills in software development and engineering to improve, and always eager to learn more on anything new that can benefit me in a workspace.</p>
+        <h3>Skills & Tools</h3>
+        <ul>
+          <li>HTML | CSS | JavaScript</li>
+          <li>  C  | C++ | C#</li>
+          <li> Git | Github</li>
+        </ul>
+      <h3>Resume</h3>
+        <p>You can view or download my resume below:</p>
+        <a href="/assets/resume/" target="_blank" class="resume-button">📄 View Resume (PDF)</a>
+        <a href="/assets/resume/" download class="resume-button">⬇️ Download Resume</a>
+      </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>List or show your key projects here.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: kjwybo@mtu.edu</p>
-  </section>
+      <div class="about-photo">
+        <img src="/assets/images/...">
+      </div>
+    </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 Kyle Wybo</p>
