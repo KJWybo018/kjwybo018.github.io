@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Kyle Wybo</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2em;
+      padding: 2em;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-info {
+      padding: 1em;
+    }
+
+    .project-info h3 {
+      margin-top: 0;
+    }
+
+    .project-info a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Projects</h1>
+    </header>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about/info_about.html">About</a>
+      <a href="/projects/project.html">Projects</a>
+      <a href="/contact/contact.html">Contact</a>
+    </nav>
+
+    <main>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="/assets/images/project1.png">
+          <div class="project-info">
+            <h3>Gr4pp-l</h3>
+            <p>Placeholder for mor eto be added</p>
+            <a href="https://github.com/KJWybo018/" target="_blank">View on Github</a>
+          </div>
+        </div>
+
+
+        <!-- Space to add more projects below when needed -->
+        
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kyle Wybo</p>
+    </footer>
+    
+  </body>
+</html>
