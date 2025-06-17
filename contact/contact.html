@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Kyle Wybo</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <style>
+    .contact-container {
+      max-width: 700px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input, textarea {
+      padding: 0.8em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      padding: 0.8em;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .contact-links {
+      margin-top: 2em;
+    }
+
+    .contact-links a {
+      display: inline-block;
+      margin-right: 1em;
+      color: #007acc;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/about/info_about.html">About</a>
+    <a href="/projects/project.html">Projects</a>
+    <a href="/contact/contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <div class="contact-container">
+      <p>If you’d like to collaborate, ask a question, or just say hello — feel free to reach out!</p>
+
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-links">
+        <p>You can also reach me directly:</p>
+        <a href="mailto:kylewybo@mtu.edu">Email</a>
+        <a href="https://github.com/KJWybo018" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/kylewybo" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kyle Wybo</p>
+  </footer>
+</body>
+</html>
