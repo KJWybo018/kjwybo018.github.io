@@ -45,6 +45,49 @@
       color: #007acc;
       font-weight: bold;
     }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .carousel-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .carousel-img.active {
+      opacity: 1;
+      position: relative;
+    }
+    
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      padding: 0.2em 0.6em;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 5px;
+    }
+    
+    .carousel-btn.prev {
+      left: 10px;
+    }
+    
+    .carousel-btn.next {
+      right: 10px;
+    }
     </style>
   </head>
 
@@ -63,7 +106,13 @@
       <div class="projects-container">
         <!-- Project 1 -->
         <div class="project-card">
-          <img src="/assets/images/...">
+          <div class="carousel">
+            <img src="" class="carousel-img active">
+            <img src="" class="carousel-img">
+            <img src="" class="carousel-img">
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
           <div class="project-info">
             <h3>Gr4pp-l</h3>
             <p>A collaborative game development project utilizing JavaScript and CSS to create engaging gameplay. Contributed to UI and core gameplay mechanics.</p>
@@ -73,7 +122,13 @@
 
         <!-- Project 2 -->
          <div class="project-card">
-          <img src="/assets/images/...">
+          <div class="carousel">
+            <img src="" class="carousel-img active">
+            <img src="" class="carousel-img">
+            <img src="" class="carousel-img">
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+          </div>
           <div class="project-info">
             <h3>Intersection Traffic Observer</h3>
             <p>Collaborative open-source web application built for a professor using Docker, Gradle, CSS, HTML, and JavaScript. Developed by a team of 8 students to monitor and analyze traffic flow at intersections.</p>
@@ -100,6 +155,32 @@
     <footer>
       <p>&copy; 2025 Kyle Wybo</p>
     </footer>
-    
+
+    <script>
+      document.querySelectorAll('.carousel').forEach(carousel => {
+      const images = carousel.querySelectorAll('.carousel-img');
+      const prevBtn = carousel.querySelector('.prev');
+      const nextBtn = carousel.querySelector('.next');
+      let index = 0;
+  
+      function showImage(i) {
+        images.forEach((img, idx) => {
+          img.classList.toggle('active', idx === i);
+        });
+      }
+  
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        showImage(index);
+      });
+  
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        showImage(index);
+      });
+  
+      showImage(index);
+    });
+    </script>
   </body>
 </html>
