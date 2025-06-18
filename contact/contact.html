@@ -11,45 +11,29 @@
       padding: 2em;
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    form {
+   .contact-item {
       display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
+     align-items: center;
+     margin-bottom: 1.5em;
+   }
 
-    input, textarea {
-      padding: 0.8em;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    button {
-      padding: 0.8em;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #555;
-    }
-
-    .contact-links {
-      margin-top: 2em;
-    }
-
-    .contact-links a {
-      display: inline-block;
+    .contact-item i {
       margin-right: 1em;
+      font-size: 1.5em;
       color: #007acc;
+    }
+
+    .contact-item a {
       text-decoration: none;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    .contact-item a:hover {
+      color:#007acc;
     }
   </style>
 </head>
@@ -67,28 +51,30 @@
 
   <main>
     <div class="contact-container">
-      <p>If you’d like to collaborate, ask a question, or just say hello — feel free to reach out!</p>
+      <p>If you’d like to get in touch, feel free to reach out through any of the methods below.</p>
 
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required />
-
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required />
-
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-links">
-        <p>You can also reach me directly:</p>
-        <a href="mailto:kylewybo@mtu.edu">Email</a>
-        <a href="https://github.com/KJWybo018" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/kylewybo" target="_blank">LinkedIn</a>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:kjwybo@mtu.edu">kjwybo@mtu.edu</a>
       </div>
+      
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/kyle-wybo" target="_blank">LinkedIn Profile</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/KJWybo018" target="_blank">GitHub Profile</a>
+      </div>
+
+      <!-- Optional Location -->
+      <!--
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Based in Michigan, USA - Open to Remote/Hybrid Work</span>
+    </div>
+      -->
     </div>
   </main>
 
