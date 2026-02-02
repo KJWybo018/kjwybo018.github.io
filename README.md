@@ -1,3 +1,3 @@
 # kjwybo018.github.io
 
-This is the code fiels for my personal Portfolio website.
+This is the code files for my personal Portfolio website.
