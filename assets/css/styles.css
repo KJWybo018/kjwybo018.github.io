@@ -1,40 +1,28 @@
+/*----------- Root Theme Variables ------------*/
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-light: #555;
+  --header-bg: #2f2f2f;
+  --nav-bg: #444;
+  --accent: #4a7bd0;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+}
+
+/*-------------- Global Styles ---------------*/
 body {
-  font-family: sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   margin: 0;
-  background: #f4f4f4;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1.5em;
-}
-
-nav {
-  background: #555;
-  text-align: center;
-  padding: 1em 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1em;
-  font-weight: bold;
-}
-
-main {
-  max-width: 800px;
-  margin: 2em auto;
-  padding: 1em;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 HTML, body {
@@ -43,10 +31,59 @@ HTML, body {
   padding: 0;
 }
 
-footer {
-  padding: 1em 0;
-  font-size: 0.9em;
+/*---------------- Header ------------------*/
+header {
   background-color: #333;
   color: white;
   text-align: center;
+  padding: 1.5em;
+  box-shadow: var(--shadow);
 }
+
+/* -------------- Navigation -------------- */
+nav {
+  background: #555;
+  text-align: center;
+  padding: 1em 0;
+  box-shadow: var(--shadow);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.2em;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: 900px;
+  margin: 2.5em auto;
+  padding: 2em;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex: 1;
+  transition: var(--transition);
+}
+
+main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 1.2em 0;
+  font-size: 0.9em;
+  background-color: var(--header-bg);
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  box-shadow: var(--shadow);
+}
+
