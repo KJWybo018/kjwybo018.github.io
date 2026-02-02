@@ -1,0 +1,45 @@
+/* Home Page Layout */
+main {
+  max-width: 900px;
+  margin: 2.5em auto;
+  padding: 0 1.5em;
+}
+
+/* Section Styling */
+.home-section {
+  margin-bottom: 3em;
+  padding: 1.5em 1.2em;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.home-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Headings */
+.home-section h2 {
+  color: var(--accent);
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.home-section p {
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* Mobile Layout */
+@media (max-width: 800px) {
+  main {
+    padding: 0 1em;
+  }
+
+  .home-section {
+    padding: 1.2em;
+  }
+}
