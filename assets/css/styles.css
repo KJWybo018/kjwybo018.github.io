@@ -7,12 +7,17 @@
   --header-bg: #2f2f2f;
   --nav-bg: #444;
   --accent: #4a7bd0;
+  --accent-hover: #3a68b5;
   --radius: 12px;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
   --transition: 0.25s ease;
 }
 
 /*-------------- Global Styles ---------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", "Segoe UI", sans-serif;
   margin: 0;
@@ -33,10 +38,12 @@ HTML, body {
 
 /*---------------- Header ------------------*/
 header {
-  background-color: #333;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: white;
   text-align: center;
-  padding: 1.5em;
+  padding: 2.5em 1.5em;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
@@ -60,6 +67,7 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* ---------- Main Content ---------- */
 main {
   max-width: 900px;
   margin: 2.5em auto;
