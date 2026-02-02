@@ -5,67 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Kyle Wybo</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <style>
-    .about-container {
-      display: flex;
-      flex-direction: row;
-      gap: 2em;
-      align-items: flex-start;
-    }
-    .about-text {
-      flex: 2;
-    }
-    .about-photo {
-      flex: 1;
-    }
-    .about-photo img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .resume-button {
-      display: inline-block;
-      margin-top: 0.5em;
-      padding: 0.5em 1em;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-    .resume-button:hover {
-      background-color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/about.css" />
 </head>
+
 <body>
   <header>
     <h1>About Me</h1>
   </header>
 
-<nav>
-  <a href="/index.html">Home</a>
-  <a href="/about/info_about.html">About</a>
-  <a href="/projects/project.html">Projects</a>
-  <a href="/contact/contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/about/info_about.html">About</a>
+    <a href="/projects/project.html">Projects</a>
+    <a href="/contact/contact.html">Contact</a>
+  </nav>
 
   <main>
-    <div class="about-container">
+    <div class="about-container fade-in">
+      
       <div class="about-text">
         <h2>Hello, I'm Kyle Wybo</h2>
         <p><strong>Software Engineer | Python | Open Source Development</strong></p>
-        <p>Software Engineer with over 2+ years of experience in open-source development and programming, specializing in Python and
-Linux environments. Proficient in leveraging advanced tools like Git, JavaScript, and Agile Methodologies to enhance software
-precision and efficiency. Known for innovative problem-solving and a collaborative spirit, contributing to groundbreaking
-project outcomes and improved team dynamics.</p>
-        
+
+        <p>
+          Software Engineer with over 2+ years of experience in open-source development and programming, specializing in Python and Linux environments. Proficient in leveraging advanced tools like Git, JavaScript, and Agile Methodologies to enhance software precision and efficiency. Known for innovative problem-solving and a collaborative spirit, contributing to groundbreaking project outcomes and improved team dynamics.
+        </p>
+
         <h3>Skills & Tools</h3>
         <ul>
           <li>Python | C | C++ | C# | JavaScript</li>
           <li>React | Tailwind CSS | pybind11</li>
           <li>Linux | Ubuntu | Embedded Software</li>
-          <li> Git | GitHub | Unity | Programming Tools</li>
+          <li>Git | GitHub | Unity | Programming Tools</li>
           <li>Open Source Development | Game Development</li>
           <li>Modular Architecture | GUI Design | Rapid Prototyping</li>
         </ul>
@@ -89,17 +60,24 @@ project outcomes and improved team dynamics.</p>
         </ul>
 
         <h3>Education</h3>
-        <p><strong>Bachelor of Computer Science</strong> - Michigan Technological University (2020 - 2025)</p>
-        
-      <h3>Resume</h3>
+        <p><strong>Bachelor of Computer Science</strong> – Michigan Technological University (2020–2025)</p>
+
+        <h3>Resume</h3>
         <p>You can view or download my resume below:</p>
-        <a href="/assets/resume/Kyle-Wybo-Software Engineer-4.pdf" target="_blank" class="resume-button">📄 View Resume (PDF)</a>
-        <a href="/assets/resume/Kyle-Wybo-Software Engineer-4.pdf" download class="resume-button">⬇️ Download Resume</a>
+
+        <a href="/assets/resume/Kyle-Wybo-Software Engineer-4.pdf" target="_blank" class="resume-button">
+          📄 View Resume (PDF)
+        </a>
+
+        <a href="/assets/resume/Kyle-Wybo-Software Engineer-4.pdf" download class="resume-button">
+          ⬇️ Download Resume
+        </a>
       </div>
 
       <div class="about-photo">
-        <img src="/assets/images/personal_profile.jpg">
+        <img src="/assets/images/personal_profile.jpg" alt="Kyle Wybo Profile Photo">
       </div>
+
     </div>
   </main>
 
